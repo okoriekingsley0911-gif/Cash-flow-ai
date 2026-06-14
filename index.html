@@ -1,12 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cashflow AI</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASHFLOW AI - Earn Money Daily</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- HEADER -->
+        <header>
+            <h1>CASHFLOW AI 💰</h1>
+            <p>Built by CEO Kingsley</p>
+            <div class="balance-card">
+                <h3>Your Balance</h3>
+                <h2>₦<span id="userBalance">0</span></h2>
+                <button id="withdrawBtn" onclick="withdrawMoney()">Claim Money</button>
+            </div>
+        </header>
+
+        <!-- TASKS SECTION -->
+        <section class="tasks">
+            <h2>🔥 Complete Tasks & Earn</h2>
+            
+            <!-- TASK 1: SPOTIFY -->
+            <div class="task-card" onclick="doTask('spotify', 50, 'https://open.spotify.com/user')">
+                <h3>🎵 Stream Music</h3>
+                <p>Play CEO Kingsley song for 30s</p>
+                <span class="reward">+₦50</span>
+            </div>
+
+            <!-- TASK 2: AUDIOMACK -->
+            <div class="task-card" onclick="doTask('audiomack', 50, 'https://audiomack.com/okoriekingsley0911')">
+                <h3>🎧 Audiomack Stream</h3>
+                <p>Stream on Audiomack 30s</p>
+                <span class="reward">+₦50</span>
+            </div>
+
+            <!-- TASK 3: FACEBOOK FOLLOW -->
+            <div class="task-card" onclick="doTask('facebook', 100, 'https://www.facebook.com/share/1BbnWkUPcB/')">
+                <h3>👍 Follow on Facebook</h3>
+                <p>7-Day Rule: Stay followed to earn</p>
+                <span class="reward">+₦100</span>
+            </div>
+
+            <!-- TASK 4: TIKTOK FOLLOW -->
+            <div class="task-card" onclick="doTask('tiktok', 100, 'https://www.tiktok.com/@kingsley_606?_r=1&_t=ZS-979rsVqUXfp')">
+                <h3>🔥 Follow on TikTok</h3>
+                <p>7-Day Rule: Stay followed to earn</p>
+                <span class="reward">+₦100</span>
+            </div>
+
+            <!-- TASK 5: INSTAGRAM FOLLOW -->
+            <div class="task-card" onclick="doTask('instagram', 100, 'https://www.instagram.com/okoriekingsley0911?igsh=aHp1Yms5ZXkzZXpv')">
+                <h3>📸 Follow on Instagram</h3>
+                <p>7-Day Rule: Stay followed to earn</p>
+                <span class="reward">+₦100</span>
+            </div>
+
+            <!-- TASK 6: X TWITTER FOLLOW -->
+            <div class="task-card" onclick="doTask('twitter', 100, 'https://x.com/KingsleyKidx')">
+                <h3>🐦 Follow on X</h3>
+                <p>7-Day Rule: Stay followed to earn</p>
+                <span class="reward">+₦100</span>
+            </div>
+
+            <!-- TASK 7: DAILY CHECKIN -->
+            <div class="task-card" onclick="doTask('checkin', 20, '')">
+                <h3>📅 Daily Check-In</h3>
+                <p>Login daily for bonus</p>
+                <span class="reward">+₦20</span>
+            </div>
+
+            <!-- TASK 8: WHATSAPP -->
+            <div class="task-card" onclick="doTask('whatsapp', 0, 'https://wa.me/2349112885397?text=Hi%20CEO%20Kingsley%2C%20I%20want%20Premium%20Access')">
+                <h3>💬 Chat CEO Kingsley</h3>
+                <p>Get Premium Access ₦5000</p>
+                <span class="reward">VIP</span>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Min Withdrawal: ₦1000 | Powered by Paystack</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>
